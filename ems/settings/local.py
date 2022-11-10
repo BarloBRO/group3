@@ -39,6 +39,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'employee_information.apps.EmployeeInformationConfig',
     'django.contrib.humanize',
+    'storages'
 ]
 
 MIDDLEWARE = [
@@ -128,6 +129,8 @@ STATIC_ROOT = os.path.join(BASE_DIR, "static_cdn", "static_root")
 MEDIA_URL = 'media/'
 
 MEDIA_ROOT = os.path.join(BASE_DIR, "static_cdn", "media_root")
+
+from ems.aws.conf import *
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field
